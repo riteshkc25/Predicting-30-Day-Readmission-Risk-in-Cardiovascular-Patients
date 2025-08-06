@@ -1,8 +1,9 @@
 # Project Overview
 Cardiovascular disease is the leading cause of death in the U.S. Hospital readmissions related to these conditions significantly impact both patient outcomes and healthcare costs. Readmission rates are often used as a benchmark for care quality across health systems.
+
 In this project I used five different machine learning models to predict 30-day readmissions in patients with cardiovascular disease. The main models I used in this project include Logistic Regression, Random Forest, XGBoost, CatBoost, and LightGBM. I also combined Logistic Regression with the best-performing model, XGBoost in a hope to see improved performance. Accurate predictions of readmittance can help with timely interventions, improve post-discharge care, and reduce overall healthcare burden.
 
-## Comparison of Model Performance
+## Comparison of model performance
 
 | Model                 | Accuracy | F1 Score | Recall | Precision | ROC AUC | Brier Score | Threshold |
 |-----------------------|----------|----------|--------|-----------|---------|--------------|-----------|
@@ -14,10 +15,16 @@ In this project I used five different machine learning models to predict 30-day 
 | CatBoost              | 0.8548   | 0.2601   | 0.3633 | 0.2026    | 0.7041  | 0.1500       | 0.5570    |
 
 ## ROC Cuve for different machine learning based prediction model
+
 ![Combined ROC curve](Images/combined_roc_curve.png)
 
+## Impactful features on prediction
 
+![Impactful Featues](Images/shap_impactful_features_barplot.png)
 
+## Distribution of impacts of each feature
+
+![Shap Summary](Images/shap_summary_plot.png)
 
 
 I am currently wirking on this project. Will update soon. 
