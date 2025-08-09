@@ -38,7 +38,7 @@ In this project I used five different machine learning models to predict 30-day 
 
 ## Risk stratification of patients with heart disease
 
-XGBoost model was used to predict the risk of readmission for cardiovascular patients. For this, I used the threshold that gave the best F1-score. The Kaplan-Meier results displayed a distinct difference in readmission rates across the groups. At 7 days, the readmission rate for the high-risk group was 8.6%, compared to a 2.1% readmission rate for the low-risk group. This increased at the 14-day mark where the readmission rates were 14.2% for the high-risk group compared to 3.5% for the low-risk group. This rate of high-risk group continued to rise through the 30-day mark providing support to the model's identification of patients who may require additional post-discharge support.
+XGBoost model was used to predict the risk of readmission for cardiovascular patients. For this, I used the threshold that gave the best F1-score. The Kaplan-Meier results displayed a distinct difference in readmission rates across the groups. At 7 days, the readmission rate for the high-risk group was 8.6%, compared to a 2.1% readmission rate for the low-risk group. This increased at the 14-day mark where the readmission rates were 14.2% for the high-risk group compared to 3.5% for the low-risk group. This rate for high-risk group continued to rise through the 30-day mark providing support to the model's identification of patients who may require additional post-discharge support.
 
 ![Risk Stratification](Images/readmission_probability_plot.png)
 
