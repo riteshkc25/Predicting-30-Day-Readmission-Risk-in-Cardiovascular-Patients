@@ -5,6 +5,58 @@ In this project I used five different machine learning models to predict 30-day 
 
 ---
 
+## Datasets
+
+The datasets used in this project is obtained from MIMIC-III, which is a publicly available database containing de-identified health records for more than 40,000 patients who were admitted to critical care units at the Beth Israel Deaconess Medical Center between 2001 and 2012. This datasets includes a wide range of information, such as patient demographics, hourly bedside vital signs, lab results, medical procedures, prescribed medications, clinician notes, imaging reports, and mortality data (both during and after hospitalization)
+[Johnson, A., Pollard, T., & Mark, R. (2016). MIMIC-III Clinical Database (version 1.4). PhysioNet. RRID:SCR_007345. https://doi.org/10.13026/C2XW26]
+
+I used SQL to extract clinical features from the dataset, focusing specifically on cardiovascular-related ICD-9 codes.
+
+### Cardiovascular ICD-9 Code Categories and Priorities
+
+- **Ischemic Heart Disease (410–414)**  
+  Often indicates acute events (like heart attack) or severe chronic conditions.  
+  <span style="color:red; font-weight:bold">High priority</span> due to acuity and readmission risk.
+
+- **Cerebrovascular Disease (430–438)**  
+  Includes strokes and transient ischemic attacks (TIAs).  
+  <span style="color:red; font-weight:bold">High priority</span> and high impact.
+
+- **Pulmonary Circulation Disease (415–417)**  
+  Conditions affecting lung blood flow, such as pulmonary embolism.  
+  <span style="color:orange; font-weight:bold">Moderate to high priority</span> — can be acute or lead to major complications.
+
+- **Hypertensive Disease (401–405)**  
+  Common, but severe hypertension can cause acute events.  
+  <span style="color:orange; font-weight:bold">Moderate priority</span>.
+
+- **Other Heart Disease (420–429)**  
+  Broad category including cardiomyopathies, heart failure, etc. Priority depends on specific code.  
+  <span style="color:orange; font-weight:bold">Moderate priority</span> overall.
+
+- **Rheumatic Heart Disease (390–398)**  
+  Less common as an acute admission reason, but indicates chronic cardiac damage.  
+  <span style="color:orange; font-weight:bold">Moderate priority</span>.
+
+- **Arterial Disease (440–449)**  
+  Peripheral artery disease, aneurysms; sometimes acute but often chronic.  
+  <span style="color:orange; font-weight:bold">Moderate priority</span>.
+
+- **Venous/Circulatory Disease (451–459)**  
+  Venous thrombosis, varices; less acute than arterial or heart disease.  
+  <span style="color:green; font-weight:bold">Lower priority</span>.
+
+- **Congenital Circulatory Anomalies (745–747)**  
+  Often diagnosed earlier in life; readmissions usually for complications or procedures.  
+  <span style="color:green; font-weight:bold">Lower priority</span>.
+
+- **Other**  
+  Catch-all category.  
+  <span style="color:green; font-weight:bold">Lowest priority</span>.
+
+  ---
+
+
 ## Comparison of model performance
 
 | Model                 | Accuracy | F1 Score | Recall | Precision | ROC AUC | Brier Score | Threshold |
