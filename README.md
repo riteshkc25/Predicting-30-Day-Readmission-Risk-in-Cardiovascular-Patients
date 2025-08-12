@@ -14,45 +14,46 @@ I used SQL to extract clinical features from the dataset, focusing specifically 
 
 ### Cardiovascular ICD-9 Code Categories and Priorities
 
-- **Ischemic Heart Disease (410–414)**  
-  Often indicates acute events (like heart attack) or severe chronic conditions.  
-  <span style="color:red; font-weight:bold">High priority</span> due to acuity and readmission risk.
+1. **Ischemic Heart Disease (410–414)**  
+   Often indicates acute events (like heart attack) or severe chronic conditions.  
+   🔴 **High priority** due to acuity and readmission risk.
 
-- **Cerebrovascular Disease (430–438)**  
-  Includes strokes and transient ischemic attacks (TIAs).  
-  <span style="color:red; font-weight:bold">High priority</span> and high impact.
+2. **Cerebrovascular Disease (430–438)**  
+   Includes strokes and transient ischemic attacks (TIAs).  
+   🔴 **High priority** and high impact.
 
-- **Pulmonary Circulation Disease (415–417)**  
-  Conditions affecting lung blood flow, such as pulmonary embolism.  
-  <span style="color:orange; font-weight:bold">Moderate to high priority</span> — can be acute or lead to major complications.
+3. **Pulmonary Circulation Disease (415–417)**  
+   Conditions affecting lung blood flow, such as pulmonary embolism.  
+   🟠 **Moderate to high priority** — can be acute or lead to major complications.
 
-- **Hypertensive Disease (401–405)**  
-  Common, but severe hypertension can cause acute events.  
-  <span style="color:orange; font-weight:bold">Moderate priority</span>.
+4. **Hypertensive Disease (401–405)**  
+   Common, but severe hypertension can cause acute events.  
+   🟠 **Moderate priority**.
 
-- **Other Heart Disease (420–429)**  
-  Broad category including cardiomyopathies, heart failure, etc. Priority depends on specific code.  
-  <span style="color:orange; font-weight:bold">Moderate priority</span> overall.
+5. **Other Heart Disease (420–429)**  
+   Broad category including cardiomyopathies, heart failure, etc. Priority depends on specific code.  
+   🟠 **Moderate priority** overall.
 
-- **Rheumatic Heart Disease (390–398)**  
-  Less common as an acute admission reason, but indicates chronic cardiac damage.  
-  <span style="color:orange; font-weight:bold">Moderate priority</span>.
+6. **Rheumatic Heart Disease (390–398)**  
+   Less common as an acute admission reason, but indicates chronic cardiac damage.  
+   🟠 **Moderate priority**.
 
-- **Arterial Disease (440–449)**  
-  Peripheral artery disease, aneurysms; sometimes acute but often chronic.  
-  <span style="color:orange; font-weight:bold">Moderate priority</span>.
+7. **Arterial Disease (440–449)**  
+   Peripheral artery disease, aneurysms; sometimes acute but often chronic.  
+   🟠 **Moderate priority**.
 
-- **Venous/Circulatory Disease (451–459)**  
-  Venous thrombosis, varices; less acute than arterial or heart disease.  
-  <span style="color:green; font-weight:bold">Lower priority</span>.
+8. **Venous/Circulatory Disease (451–459)**  
+   Venous thrombosis, varices; less acute than arterial or heart disease.  
+   🟢 **Lower priority**.
 
-- **Congenital Circulatory Anomalies (745–747)**  
-  Often diagnosed earlier in life; readmissions usually for complications or procedures.  
-  <span style="color:green; font-weight:bold">Lower priority</span>.
+9. **Congenital Circulatory Anomalies (745–747)**  
+   Often diagnosed earlier in life; readmissions usually for complications or procedures.  
+   🟢 **Lower priority**.
 
-- **Other**  
-  Catch-all category.  
-  <span style="color:green; font-weight:bold">Lowest priority</span>.
+10. **Other**  
+    Catch-all category.  
+    🟢 **Lowest priority**.
+
 
   ---
 
