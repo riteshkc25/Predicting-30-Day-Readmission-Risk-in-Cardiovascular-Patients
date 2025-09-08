@@ -22,7 +22,7 @@ The main challenge of this project was the severe class imbalance. My analysis r
 
 I performed a comprehensive comparison of several machine learning algorithms to identify the best-performing model for this task. The primary goal was to find a model that could effectively distinguish between classes. To this end, I evaluated each model using multiple metrics, including recall, F1-score and ROC-AUC for the minority class.
 
-<img src="(https://github.com/riteshkc25/Predicting-30-Day-Readmission-Risk-in-Cardiovascular-Patients/blob/main/Images/combined_roc_curve.png)" alt="Alt Text" style="width:50%; height:auto;"> 
+<img src="https://github.com/riteshkc25/Predicting-30-Day-Readmission-Risk-in-Cardiovascular-Patients/blob/main/Images/combined_roc_curve.png" alt="Combined ROC curve" style="width:50%; height:auto;"> 
 
 ## 3. Hyperparameter tuning:
 
