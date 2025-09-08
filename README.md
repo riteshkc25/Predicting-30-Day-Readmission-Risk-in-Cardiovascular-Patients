@@ -13,7 +13,9 @@ The main challenge of this project was the severe class imbalance. My analysis r
 ## 1. Data processing and feature engineering:
 
 <ins>I. Data source:</ins> I used a subset (cardiovascular ICD-9) of clinical MIMIC-III datasets. [Johnson, A., Pollard, T., & Mark, R. (2016). MIMIC-III Clinical Database (version 1.4). PhysioNet. RRID:SCR_007345. https://doi.org/10.13026/C2XW26] The features I primarily included are- demographic features, hospital admissions, and lab results and I used SQL to extract these features from the original database. 
+
 <ins>II. Feature engineering:</ins> Raw datasets were transformed into meaningful features for the models. This includes identifying time difference between admissions, transforming ICD-9 codes to clinically relevant features, dealing with missing values, dealing with outliers, scaling, one hot encoding and selecting most relevant features.
+
 <ins>III. Handling class imbalance:</ins> I explored two main strategies- using SMOTE-ENN and a class imbalance weight (scale_pos_weight) directly within the model.
 
 ## 2. Model comparison
@@ -36,8 +38,11 @@ I generated SHAP force plots for two individual cases: a patient correctly predi
 
 # Post-Modeling Analysis and Impact
 To demonstrate the real-world utility of the model, I performed several post-modeling analyses:
+
 <ins>I. Probability calibration:</ins> I calibrated output probabilities of the best XGBoost model to ensure the predicted probability truly corresponded a true chance of readmission.
+
 <ins>II. Risk stratification:</ins> I used F1-score threshold to categorize the entire patient cohort into a high-risk group and a low-risk group. This provides a clear, actionable way to prioritize patients for intervention.
+
 <ins>III. Survival analysis (Kaplan-Meier):</ins> To validate the effectiveness of the risk stratification, I created a Kaplan-Meier survival curve. This plot shows the probability of readmission of the high-risk group versus the low-risk group. The significant separation of the curves provides a compelling visual proof that the model successfully identified patients with different risk profiles.
 
 # Results and Limitations
