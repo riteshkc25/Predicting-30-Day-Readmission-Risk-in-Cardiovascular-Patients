@@ -22,7 +22,7 @@ The main challenge of this project was the severe class imbalance. My analysis r
 
 I performed a comprehensive comparison of several machine learning algorithms to identify the best-performing model for this task. The primary goal was to find a model that could effectively distinguish between classes. To this end, I evaluated each model using multiple metrics, including recall, F1-score and ROC-AUC for the minority class.
 
-![Combined ROC curve](Images/combined_roc_curve.png)
+![Combined ROC curve](Images/combined_roc_curve.png) width=50% height=50%
 
 ## 3. Hyperparameter tuning:
 
