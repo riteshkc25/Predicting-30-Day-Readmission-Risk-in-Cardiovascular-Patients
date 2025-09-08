@@ -22,7 +22,7 @@ The main challenge of this project was the severe class imbalance. My analysis r
 
 I performed a comprehensive comparison of several machine learning algorithms to identify the best-performing model for this task. The primary goal was to find a model that could effectively distinguish between classes. To this end, I evaluated each model using multiple metrics, including recall, F1-score and ROC-AUC for the minority class.
 
-   <img src="https://github.com/riteshkc25/Predicting-30-Day-Readmission-Risk-in-Cardiovascular-Patients/blob/main/Images/combined_roc_curve.png" alt="Combined ROC curve" style="width:50%; height:auto;"> 
+<img src="https://github.com/riteshkc25/Predicting-30-Day-Readmission-Risk-in-Cardiovascular-Patients/blob/main/Images/combined_roc_curve.png" alt="Combined ROC curve" style="width:50%; height:auto;"> 
 
 ## 3. Hyperparameter tuning:
 
@@ -33,6 +33,11 @@ Based on a combination of high F1 score, good recall, and a high ROC-AUC, I sele
 
 # Model Explainability and Interpretation (SHAP)
 I used SHAP (SHapley Additive exPlanations) to interpret the the prediction of the model and impactful features. This is crucial for gaining clinical trust and understanding which specific feature was more important for readmission.
+
+| Shap summary Plot      | Shap impactful features|
+| ---------------------- | ---------------------- |
+| ![summary plot](Images/shap_summary_plot.png) | ![impactful features](Images/shap_impactful_features_barplot.png) |
+
 
 I generated SHAP force plots for two individual cases: a patient correctly predicted as high-risk and another correctly predicted as low-risk. These plots illustrate the features that most significantly contributed to each prediction.
 
