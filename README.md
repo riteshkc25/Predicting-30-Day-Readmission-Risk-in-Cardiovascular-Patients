@@ -12,9 +12,9 @@ The main challenge of this project was the severe class imbalance. My analysis r
 
 ## 1. Data processing and feature engineering:
 
-** I. Data source:** I used a subset (cardiovascular ICD-9) of clinical MIMIC-III datasets. [Johnson, A., Pollard, T., & Mark, R. (2016). MIMIC-III Clinical Database (version 1.4). PhysioNet. RRID:SCR_007345. https://doi.org/10.13026/C2XW26] The features I primarily included are- demographic features, hospital admissions, and lab results and I used SQL to extract these features from the original database. 
-** II. Feature engineering:** Raw datasets were transformed into meaningful features for the models. This includes identifying time difference between admissions, transforming ICD-9 codes to clinically relevant features, dealing with missing values, dealing with outliers, scaling, one hot encoding and selecting most relevant features.
-** III. Handling class imbalance:** I explored two main strategies- using SMOTE-ENN and a class imbalance weight (scale_pos_weight) directly within the model.
+<ins>I. Data source:</ins> I used a subset (cardiovascular ICD-9) of clinical MIMIC-III datasets. [Johnson, A., Pollard, T., & Mark, R. (2016). MIMIC-III Clinical Database (version 1.4). PhysioNet. RRID:SCR_007345. https://doi.org/10.13026/C2XW26] The features I primarily included are- demographic features, hospital admissions, and lab results and I used SQL to extract these features from the original database. 
+<ins>II. Feature engineering:</ins> Raw datasets were transformed into meaningful features for the models. This includes identifying time difference between admissions, transforming ICD-9 codes to clinically relevant features, dealing with missing values, dealing with outliers, scaling, one hot encoding and selecting most relevant features.
+<ins>III. Handling class imbalance:</ins> I explored two main strategies- using SMOTE-ENN and a class imbalance weight (scale_pos_weight) directly within the model.
 
 ## 2. Model comparison
 
@@ -29,27 +29,34 @@ I used RandomizedSearchCV to fine-tune the hyperparameters for optimal performan
 ## 4. Final model selection 
 Based on a combination of high F1 score, good recall, and a high ROC-AUC, I selected the XGBoost model with class imbalance weight. It presented a strong balance of performance metrics that are critical for this problem, without the added complexity of a stacking model.
 
-## 5. Model Explainability and Interpretation (SHAP)
+# Model Explainability and Interpretation (SHAP)
 I used SHAP (SHapley Additive exPlanations) to interpret the the prediction of the model and impactful features. This is crucial for gaining clinical trust and understanding which specific feature was more important for readmission.
 
 I generated SHAP force plots for two individual cases: a patient correctly predicted as high-risk and another correctly predicted as low-risk. These plots illustrate the features that most significantly contributed to each prediction.
 
-## 6. Post-Modeling Analysis and Impact
+# Post-Modeling Analysis and Impact
 To demonstrate the real-world utility of the model, I performed several post-modeling analyses:
-** I. Probability calibration:** I calibrated output probabilities of the best XGBoost model to ensure the predicted probability truly corresponded a true chance of readmission.
-** II. Risk stratification:** I used F1-score threshold to categorize the entire patient cohort into a high-risk group and a low-risk group. This provides a clear, actionable way to prioritize patients for intervention.
-** III. Survival analysis (Kaplan-Meier):** To validate the effectiveness of the risk stratification, I created a Kaplan-Meier survival curve. This plot shows the probability of readmission of the high-risk group versus the low-risk group. The significant separation of the curves provides a compelling visual proof that the model successfully identified patients with different risk profiles.
+<ins>I. Probability calibration:</ins> I calibrated output probabilities of the best XGBoost model to ensure the predicted probability truly corresponded a true chance of readmission.
+<ins>II. Risk stratification:</ins> I used F1-score threshold to categorize the entire patient cohort into a high-risk group and a low-risk group. This provides a clear, actionable way to prioritize patients for intervention.
+<ins>III. Survival analysis (Kaplan-Meier):</ins> To validate the effectiveness of the risk stratification, I created a Kaplan-Meier survival curve. This plot shows the probability of readmission of the high-risk group versus the low-risk group. The significant separation of the curves provides a compelling visual proof that the model successfully identified patients with different risk profiles.
 
-## 7. Results and Limitations
+# Results and Limitations
 While the model's overall accuracy is high, the low precision and recall for the readmission class highlight the inherent difficulty of this problem. The model's predictions serve as a valuable tool for risk prioritization but should be used in conjunction with clinical judgment.
 
-## 8. What I Learned and Next Steps
+# What I Learned and Next Steps
 This project was a comprehensive exercise in developing a complete machine learning solution for a challenging clinical problem. It taught me the importance of
 
-** I. Systematic model comparison:** Evaluating multiple models and metrics (using scores like recall, F1-score and ROC AUC) to make a data-driven choice.
-** II. Handling class imbalance:** Understanding the trade-offs of different techniques like scale_pos_weight versus SMOTE or SMOTE-ENN.
-** III. Model explainability:** The power of using tools like SHAP in high-stakes domains.
-** IV. Actionable insights:** Moving beyond raw predictions to create actionable insights, such as risk stratification.
+## Systematic model comparison:
+Evaluating multiple models and metrics (using scores like recall, F1-score and ROC AUC) to make a data-driven choice.
+ 
+## Handling class imbalance: 
+Understanding the trade-offs of different techniques like scale_pos_weight versus SMOTE or SMOTE-ENN.
+
+## Model explainability: 
+The power of using tools like SHAP in high-stakes domains.
+
+## IV. Actionable insights:
+Moving beyond raw predictions to create actionable insights, such as risk stratification.
 
 To further enhance this work, I would explore more advanced feature engineering, such as patient comorbidity scores, medication adherence data, or specific clinical event timelines to capture additional predictive signal.
 
