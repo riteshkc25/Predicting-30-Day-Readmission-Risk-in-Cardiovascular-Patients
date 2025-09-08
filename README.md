@@ -51,17 +51,13 @@ While the model's overall accuracy is high, the low precision and recall for the
 # What I Learned and Next Steps
 This project was a comprehensive exercise in developing a complete machine learning solution for a challenging clinical problem. It taught me the importance of
 
-## Systematic model comparison:
-Evaluating multiple models and metrics (using scores like recall, F1-score and ROC AUC) to make a data-driven choice.
+<ins>I. Systematic model comparison:</ins> Evaluating multiple models and metrics (using scores like recall, F1-score and ROC AUC) to make a data-driven choice.
  
-## Handling class imbalance: 
-Understanding the trade-offs of different techniques like scale_pos_weight versus SMOTE or SMOTE-ENN.
+<ins>II. Handling class imbalance:</ins> Understanding the trade-offs of different techniques like scale_pos_weight versus SMOTE or SMOTE-ENN.
 
-## Model explainability: 
-The power of using tools like SHAP in high-stakes domains.
+<ins>III. Model explainability:</ins> The power of using tools like SHAP in high-stakes domains.
 
-## IV. Actionable insights:
-Moving beyond raw predictions to create actionable insights, such as risk stratification.
+<ins>IV. Actionable insights:</ins> Moving beyond raw predictions to create actionable insights, such as risk stratification.
 
 To further enhance this work, I would explore more advanced feature engineering, such as patient comorbidity scores, medication adherence data, or specific clinical event timelines to capture additional predictive signal.
 
