@@ -42,7 +42,7 @@ I used RandomizedSearchCV to fine-tune the hyperparameters for optimal performan
 
 Based on a combination of high F1 score, good recall, and a high ROC-AUC, I selected the XGBoost model with class imbalance weight. It presented a strong balance of performance metrics that are critical for this problem, without the added complexity of a stacking model.
 
-# Model Explainability and Interpretation (SHAP)
+## 5. Model Explainability and Interpretation (SHAP)
 I used SHAP (SHapley Additive exPlanations) to interpret the the prediction of the model and impactful features. This is crucial for gaining clinical trust and understanding which specific feature was more important for readmission.
 
 | Shap summary Plot      | Shap impactful features|
