@@ -29,6 +29,17 @@ I performed a comprehensive comparison of several machine learning algorithms to
 I used RandomizedSearchCV to fine-tune the hyperparameters for optimal performance of different models. It helped me to explore a wide range of parameter combinations in a reasonable amount of time.
 
 ## 4. Final model selection 
+
+| Model | Accuracy | F1 Score | Recall | Precision | ROC AUC | Brier Score | Optimum Threshold |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Logistic Regression | 0.8440 | 0.2396 | 0.3496 | 0.1823 | 0.6951 | 0.2133 | 0.6310 |
+| Random Forest | 0.8639 | 0.2371 | 0.3008 | 0.1957 | 0.6945 | 0.1514 | 0.5120 |
+| XGBoost | 0.8317 | 0.2488 | 0.3965 | 0.1812 | 0.6975 | 0.1514 | 0.5320 |
+| XGBoost+SMOTEENN | 0.8112 | 0.2297 | 0.4004 | 0.1610 | 0.6975 | 0.1210 | 0.4380 |
+| XGBoost+Logit Stacking | 0.8778 | 0.2546 | 0.2969 | 0.2229 | 0.7019 | 0.2264 | 0.7040 |
+| LightGBM | 0.8060 | 0.2111 | 0.3691 | 0.1478 | 0.6764 | 0.0651 | 0.0940 |
+| CatBoost | 0.8548 | 0.2601 | 0.3633 | 0.2026 | 0.7041 | 0.1500 | 0.5570 |
+
 Based on a combination of high F1 score, good recall, and a high ROC-AUC, I selected the XGBoost model with class imbalance weight. It presented a strong balance of performance metrics that are critical for this problem, without the added complexity of a stacking model.
 
 # Model Explainability and Interpretation (SHAP)
