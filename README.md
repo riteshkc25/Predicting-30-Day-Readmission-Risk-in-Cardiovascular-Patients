@@ -41,6 +41,8 @@ I used SHAP (SHapley Additive exPlanations) to interpret the the prediction of t
 
 I generated SHAP force plots for two individual cases: a patient correctly predicted as high-risk and another correctly predicted as low-risk. These plots illustrate the features that most significantly contributed to each prediction.
 
+<img src="https://github.com/riteshkc25/Predicting-30-Day-Readmission-Risk-in-Cardiovascular-Patients/blob/main/Images/shap_force_plot1.html" alt="Shap force plot cat 1">
+
 # Post-Modeling Analysis and Impact
 To demonstrate the real-world utility of the model, I performed several post-modeling analyses:
 
