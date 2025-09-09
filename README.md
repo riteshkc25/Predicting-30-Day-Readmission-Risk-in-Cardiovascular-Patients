@@ -41,7 +41,7 @@ I used SHAP (SHapley Additive exPlanations) to interpret the the prediction of t
 
 I generated SHAP force plots for two individual cases: a patient correctly predicted as high-risk and another correctly predicted as low-risk. These plots illustrate the features that most significantly contributed to each prediction.
 
-<img src="Images/shap_force_plot_1.png" alt="Shap force plot cat 1">
+<img src="Images/shap_force_plot1.png" alt="Shap force plot cat 1">
 
 <img src="Images/shap_force_plot_0.png" alt="Shap force plot cat 0">
 
