@@ -22,7 +22,7 @@ The main challenge of this project was the severe class imbalance. My analysis r
 
 I performed a comprehensive comparison of several machine learning algorithms to identify the best-performing model for this task. The primary goal was to find a model that could effectively distinguish between classes. To this end, I evaluated each model using multiple metrics, including recall, F1-score and ROC-AUC for the minority class.
 
-<img src="https://github.com/riteshkc25/Predicting-30-Day-Readmission-Risk-in-Cardiovascular-Patients/blob/main/Images/combined_roc_curve.png" alt="Combined ROC curve" style="width:50%; height:auto;"> 
+<img src="https://github.com/riteshkc25/Predicting-30-Day-Readmission-Risk-in-Cardiovascular-Patients/blob/main/Images/combined_roc_curve.png" alt="Combined ROC curve" style="width:60%; height:auto;"> 
 
 ## 3. Hyperparameter tuning:
 
@@ -46,9 +46,13 @@ To demonstrate the real-world utility of the model, I performed several post-mod
 
 <ins>I. Probability calibration:</ins> I calibrated output probabilities of the best XGBoost model to ensure the predicted probability truly corresponded a true chance of readmission.
 
+<img src="https://github.com/riteshkc25/Predicting-30-Day-Readmission-Risk-in-Cardiovascular-Patients/blob/main/Images/calibration_plot_xgboost.png" alt="Combined ROC curve" style="width:60%; height:auto;">
+
 <ins>II. Risk stratification:</ins> I used F1-score threshold to categorize the entire patient cohort into a high-risk group and a low-risk group. This provides a clear, actionable way to prioritize patients for intervention.
 
 <ins>III. Survival analysis (Kaplan-Meier):</ins> To validate the effectiveness of the risk stratification, I created a Kaplan-Meier survival curve. This plot shows the probability of readmission of the high-risk group versus the low-risk group. The significant separation of the curves provides a compelling visual proof that the model successfully identified patients with different risk profiles.
+
+<img src="https://github.com/riteshkc25/Predicting-30-Day-Readmission-Risk-in-Cardiovascular-Patients/blob/main/Images/readmission_probability_plot.png" alt="Combined ROC curve" style="width:60%; height:auto;">
 
 # Results and Limitations
 While the model's overall accuracy is high, the low precision and recall for the readmission class highlight the inherent difficulty of this problem. The model's predictions serve as a valuable tool for risk prioritization but should be used in conjunction with clinical judgment.
