@@ -56,7 +56,7 @@ I generated SHAP force plots for two individual cases: a patient correctly predi
 
 <img src="Images/shap_force_plot_0.png" alt="Shap force plot cat 0">
 
-# Post-Modeling Analysis and Impact
+# Post-Modeling Analysis and Impact:
 To demonstrate the real-world utility of the model, I performed several post-modeling analyses:
 
 <ins>I. Probability calibration:</ins> I calibrated output probabilities of the best XGBoost model to ensure the predicted probability truly corresponded a true chance of readmission.
@@ -72,7 +72,7 @@ To demonstrate the real-world utility of the model, I performed several post-mod
 # Results and Limitations
 While the model's overall accuracy is high, the low precision and recall for the readmission class highlight the inherent difficulty of this problem. The model's predictions serve as a valuable tool for risk prioritization but should be used in conjunction with clinical judgment.
 
-# What I Learned and Next Steps
+# What I Learned and Next Steps:
 This project was a comprehensive exercise in developing a complete machine learning solution for a challenging clinical problem. It taught me the importance of
 
 <ins>I. Systematic model comparison:</ins> Evaluating multiple models and metrics (using scores like recall, F1-score and ROC AUC) to make a data-driven choice.
