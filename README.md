@@ -85,6 +85,3 @@ This project was a comprehensive exercise in developing a complete machine learn
 
 To further enhance this work, I would explore more advanced feature engineering, such as patient comorbidity scores, medication adherence data, or specific clinical event timelines to capture additional predictive signal.
 
-
-
-I am currently wirking on this project. Will update soon. 
